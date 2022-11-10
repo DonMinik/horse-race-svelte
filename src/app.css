@@ -1,6 +1,6 @@
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 400;
 
   color-scheme: dark light;
@@ -13,17 +13,17 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-@media (min-height: 450){
-  :root { font-size: 9px;
+@media (min-height: 640px){
+  :root { font-size: 11px;
   }
 }
 
-@media (min-height: 800px){
+@media (min-height: 900px){
   :root { font-size: 16px;
   }
 }
 
-@media (min-height: 1100px){
+@media (min-height: 1150px){
   :root { font-size: 20px;
   }
 }
