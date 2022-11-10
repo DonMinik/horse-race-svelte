@@ -95,11 +95,11 @@
 </div>
 {#if winner}
   <WinnerOverly winner={winner} on:nextGame={reset}/>
-{/if}
+{:else}
 <div>
  <Deck on:drawCard={advanceRace}/>
 </div>
-
+{/if}
 
 
 <style>
