@@ -15,6 +15,7 @@ export function resetState() {
   _progress.diamonds = 0;
   _progress.clubs = 0;
   _progress.spades = 0;
+  progress.set(_progress);
 }
 
 export const progress = writable(_progress);

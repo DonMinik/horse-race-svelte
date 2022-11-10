@@ -34,19 +34,19 @@
 <style>
 div {
   display: grid;
-  grid-template-columns: repeat(2, 5rem);
-  gap: 10px;
+  grid-template-columns: repeat(2, 4.9rem);
+  gap: 0.1rem;
   grid-auto-rows: minmax(5rem, auto);
-  border: 1px solid;
-  padding: 1rem;
-  background-color: lightgray
+  padding:  0.9rem 2.5rem 0 ;
+  border-radius: 0 0 0.2rem 0.2rem;
+  background-color: #395B64
 }
 
 button {
   height: 2.5rem;
   width: 6rem;
-  color:white;
-  background-color: black;
+  color: #000;
+  background-color: #A5C9CA;
   grid-row: 2
 }
 </style>

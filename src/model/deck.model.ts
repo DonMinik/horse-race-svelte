@@ -7,6 +7,7 @@ export type CardModel = {
 }
 
 export enum Colour {
+  NONE,
   HEARTS,
   DIAMONDS,
   CLUBS,

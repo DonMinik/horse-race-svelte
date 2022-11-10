@@ -28,19 +28,19 @@
 <style>
 div {
   display: grid;
-  grid-template-columns: repeat(6, 6rem);
+  grid-template-columns: repeat(6, 4.9rem);
   gap: 0.1rem;
   grid-auto-rows: minmax(5rem, auto);
-  border: 1px solid;
-  padding: 1rem;
-   background-color: lightgray
 
+  border-radius: 0.2rem 0.2rem  0 0;
+    padding: 0.3rem 0;
+
+}
+.section {
+     background-color: #395B64
 }
 
 .lane-marking {
-    background-color: darkgray
+    background-color: #A5C9CA
 }
-
-
-
 </style>

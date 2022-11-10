@@ -3,6 +3,7 @@
   import Deck from './deck.svelte'
   import Jockey from './jockey.svelte'
   import Card from './card.svelte'
+  import WinnerOverly from './winner-overlay.svelte'
   import LaneMarking from './lane-marking.svelte'
   import {Colour, deckModel, deckState} from '../model/deck.model.ts'
   import {advance, progress, resetState, relapse} from '../model/game.state.ts'
@@ -14,6 +15,7 @@
   let laneMarkingThree: Card | undefined;
   let laneMarkingFour: Card | undefined;
   
+  let winner:Colour | undefined;
   function advanceRace(event) {
     advance(event?.detail?.colour)
   } 
@@ -26,6 +28,7 @@
   })
 
   progress.subscribe(state => {
+    console.log('new state', state)
     gameState = state;
     revealLaneMarking();
     checkForWinner();
@@ -33,23 +36,22 @@
 
   function checkForWinner() {
      if (gameState.hearts === 5) {
-      alert('hearts won!')
-      reset();
+       console.log('hearts wins')
+      winner = Colour.HEARTS;
+      console.log(winner)
     } else if (gameState.diamonds === 5) {
-      alert('diamonds won!')
-      reset();
+      winner = Colour.DIAMONDS;
     } else if (gameState.clubs === 5) {
-      alert('clubs won!')
-      reset();
+      winner = Colour.CLUBS;
     } else if (gameState.spades === 5) {
-      alert('spades won!')
-      reset();
+      winner = Colour.SPADES;
     }
   }
 
   function reset() {
     resetState();
     deckModel.shuffle();
+    winner = undefined;
   }
 
   function revealLaneMarking() {
@@ -70,18 +72,18 @@
 
 </script>
 <div class='racing-stadium'>
-  <Lane position={gameState?.hearts}> 
+  <Lane position={gameState.hearts}> 
     <Jockey colour={Colour.HEARTS} />
   </Lane>
 
- <Lane position={gameState?.diamonds}>
+ <Lane position={gameState.diamonds}>
     <Jockey colour={Colour.DIAMONDS}/>
   </Lane>
 
-  <Lane position={gameState?.clubs}>
+  <Lane position={gameState.clubs}>
     <Jockey colour={Colour.CLUBS} />
   </Lane>
-  <Lane position= {gameState?.spades}>
+  <Lane position= {gameState.spades}>
     <Jockey colour={Colour.SPADES} />
   </Lane>
   <LaneMarking>
@@ -91,16 +93,19 @@
     <Card slot='four'card={laneMarkingFour}/>
   </LaneMarking>
 </div>
-
+{#if winner}
+  <WinnerOverly winner={winner} on:nextGame={reset}/>
+{/if}
 <div>
  <Deck on:drawCard={advanceRace}/>
 </div>
+
+
 
 <style>
 .racing-stadium {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  border: 1px solid
 }
 
 .deck {

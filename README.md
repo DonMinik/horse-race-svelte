@@ -1,3 +1,5 @@
 # horse-race-svelte
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vitejs-vite-dfs1bz)
+## Horse Race Card Game
+
+The horse race card game is a game in which the Jack card represents a jockey. The jockeys of each suit compete a four card long race pit. The first jockey who beats the distance wins.

@@ -40,23 +40,27 @@ export let position = 0;
 <style>
 div {
   display: grid;
-  grid-template-columns: repeat(6, 6rem);
+  grid-template-columns: repeat(6, 4.9rem);
   gap: 0.1rem;
   grid-auto-rows: minmax(5rem, auto);
-  border: 1px solid;
-  padding: 1rem;
+  padding: 0.1rem 0;
+  border-radius: 0.2rem;
 }
 
 .start {
-  background-color: lightgray
+  background-color: #395B64;
+  border-radius:  0.2rem 0 0 0.2rem 
 }
 
 .section {
-  background-color: lightgreen
+  background-color: #E7F6F2;
+  border-radius: 0
 }
 
 .finish {
-  background-color: darkgray
+    border-radius: 0 0.2rem 0.2rem 0;
+
+  background-color: #A5C9CA
 }
 
 </style>
