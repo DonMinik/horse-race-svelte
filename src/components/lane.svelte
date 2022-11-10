@@ -58,8 +58,7 @@ div {
 }
 
 .finish {
-    border-radius: 0 0.2rem 0.2rem 0;
-
+  border-radius: 0 0.2rem 0.2rem 0;
   background-color: #A5C9CA
 }
 

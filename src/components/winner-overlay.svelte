@@ -22,7 +22,7 @@
     <i class='red'>&diams;</i>
     <h2>Diamonds won!</h2>
   {:else if winner === Colour.CLUBS}
-    <i class='black'> &clubs; </i>
+    <i class='black'>&clubs;</i>
     <h2>Clubs won!</h2>
   {:else if winner === Colour.SPADES}
     <i class='black'>&spades;</i>
@@ -61,13 +61,13 @@ h2 {
 }
 
 i {
-  font-size: 5rem;
-  background-color: #FFF;
-  border-radius: 100%;
-  margin: 1rem;
-  padding: 1rem;
-  height: 2.6rem;
-  width: 2.6rem;
+font-size: 4rem;
+    background-color: #FFF;
+    border-radius: 100%;
+    margin: 1rem;
+    padding: 1rem;
+    height: 5rem;
+    width: 5rem;
 }
 
 .red {

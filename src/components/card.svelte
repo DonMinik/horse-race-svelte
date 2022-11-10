@@ -15,23 +15,24 @@ const dispatch = createEventDispatcher();
 </script>
 
 
-<div on:click={click} class=' {card?  card.value + card.colour : 'backside'}'>
+<div  on:click={click} class='card {card?  card.value + card.colour : 'backside'}'>
   {#if card}
+
   <span class='left' >
+    <Icon colour={card.colour}/>
+  </span>
+  <span class='left val'>{card.value}</span>
   <Icon colour={card.colour}/>
-   </span>
-   <span class='left val'>{card.value}</span>
-  <Icon colour={card.colour}/>
-   <span class='right val' >{card.value}</span>
-   <span class='right'>
+  <span class='right val' >{card.value}</span>
+  <span class='right'>
    <Icon colour={card.colour}/>
-   </span>
-  {/if}
-  
+  </span>
+
+    {/if}
  </div>
 
 <style>
-div {
+.card {
   display: flex;
   flex-direction: column;
   background-color: #FFF;
@@ -41,22 +42,22 @@ div {
   height: 6.5rem;
   margin: 0.4rem
 }
-span {
+.card > span {
+  flex: 1 0 auto;
   font-size: 0.8rem;
-  height: 0.9rem;
-  margin:0.2rem;
+  margin:0 0.2rem ;
 }
 
-.val {
-  margin: 0 0.3rem;
+.card > .val {
+  margin: 0.1rem 0.3rem;
 }
-.right{
+.card > .right{
     align-self: flex-end;
     float:right;
     text-align:right;
 }
 
-.left {
+.card > .left {
     align-self: flex-start;
     float:left;
     text-align:left;
