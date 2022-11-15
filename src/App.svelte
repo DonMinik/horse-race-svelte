@@ -1,6 +1,4 @@
 <script lang="ts">
-  import svelteLogo from './assets/svelte.svg'
-
   import Board from './components/board.svelte'
 </script>
 
