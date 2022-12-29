@@ -1,0 +1,14 @@
+{
+    "background_color": "#2C3333",
+    "description": "Play a fun rounf of horse race the card game.",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "/src/assets/Spades.svg",
+            "type": "image/svg"
+        }
+    ],
+    "name": "Horse Race Card Game",
+    "short_name": "Horse Race",
+    "start_url":"/horese-race-svelte/index.html"
+}
