@@ -1,7 +1,7 @@
 {
     "background_color": "#2C3333",
     "description": "Play a fun rounf of horse race the card game.",
-    "display": "fullscreen",
+    "display": "standalone",
     "icons": [
         {
             "src": "/src/assets/Spades.svg",
